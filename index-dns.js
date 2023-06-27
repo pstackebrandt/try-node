@@ -1,9 +1,14 @@
+// Purpose: get the IP address of a hostname
+
 'use strict';
+
 const dns = require('dns');
-dns.lookup('google.com', (err, address) => {
+
+const hostname = 'google.com';
+
+dns.lookup(hostname, (err, address) => {
 	if (err) console.log(err)
 	else console.log(address);
-})
+});
 
-
-console.log('Hello world');
+// possible Output: 2a00:1450:4005:801::200e 
